@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bhavu 💗 11/11</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--pink:#ff7eb6;--rose:#ff4f93;--blush:#ffe3ee;--ink:#5a2342;--glass:rgba(255,255,255,.28);--edge:rgba(255,255,255,.65);--r:26px}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:'Quicksand',system-ui,sans-serif;color:var(--ink);min-height:100vh;line-height:1.7;
+background:linear-gradient(160deg,#ffd6e8,#ffb3d1 45%,#ff94c2);background-attachment:fixed;overflow-x:hidden}
+body::before,body::after{content:"";position:fixed;width:46vmax;height:46vmax;border-radius:50%;filter:blur(70px);z-index:-1;opacity:.55}
+body::before{background:#fff;top:-18vmax;left:-14vmax}
+body::after{background:#ff5fa2;bottom:-18vmax;right:-14vmax}
+.glass{background:var(--glass);backdrop-filter:blur(18px) saturate(160%);-webkit-backdrop-filter:blur(18px) saturate(160%);border:1.5px solid var(--edge);border-radius:var(--r);box-shadow:0 10px 35px rgba(190,40,110,.18),inset 0 1px 0 rgba(255,255,255,.7)}
+h1,h2{font-family:'Caveat',cursive;font-weight:700;line-height:1.1}
+h2{font-size:clamp(2rem,7vw,3rem);text-align:center;margin-bottom:.4em;color:#b0125f}
+section{max-width:860px;margin:0 auto;padding:64px 20px}
+.sub{text-align:center;opacity:.8;margin-bottom:28px}
+svg.cat{display:block}
+
+/* gate */
+#gate{position:fixed;inset:0;z-index:50;display:grid;place-items:center;padding:20px;background:linear-gradient(160deg,#ffd6e8,#ff9cc6);transition:opacity .9s,visibility .9s}
+#gate.gone{opacity:0;visibility:hidden}
+#gate .glass{padding:34px 26px;text-align:center;max-width:360px;width:100%}
+#gate h1{font-size:2.5rem;color:#b0125f;margin:10px 0 4px}
+.btn{font:700 1rem 'Quicksand',sans-serif;color:#fff;background:linear-gradient(135deg,var(--pink),var(--rose));border:1px solid rgba(255,255,255,.7);padding:13px 28px;border-radius:999px;cursor:pointer;box-shadow:0 8px 22px rgba(255,79,147,.4);transition:transform .2s}
+.btn:active{transform:scale(.95)}
+.btn:focus-visible,.flip:focus-visible,#catbtn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.bob{animation:bob 3s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-8px)}}
+
+/* hero */
+#hero{min-height:100svh;display:grid;place-items:center;text-align:center}
+#hero .glass{padding:44px 24px;width:100%}
+.big{font-family:'Caveat',cursive;font-size:clamp(5rem,26vw,10rem);line-height:.9;color:#fff;text-shadow:0 6px 30px rgba(176,18,95,.45)}
+.hello{font-size:1.15rem;margin-top:14px}
+.scroll{margin-top:20px;font-size:.9rem;opacity:.75}
+
+/* letter */
+.letter{padding:30px 26px;font-size:1.05rem}
+.letter p{margin-bottom:14px;opacity:0;transform:translateY(8px);transition:.7s}
+.letter p.on{opacity:1;transform:none}
+.sign{font-family:'Caveat',cursive;font-size:1.9rem;text-align:right;color:#b0125f}
+
+/* timeline */
+.tl{position:relative;display:grid;gap:16px;padding-left:26px}
+.tl::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:3px;border-radius:3px;background:linear-gradient(#fff,var(--rose))}
+.ev{padding:18px 20px;position:relative}
+.ev::before{content:"🐾";position:absolute;left:-28px;top:16px;font-size:.95rem}
+.ev b{display:block;font-size:1.05rem;color:#b0125f}
+.ev small{opacity:.7}
+
+/* cat corner */
+.cats{padding:30px 20px;text-align:center}
+#catbtn{background:none;border:0;cursor:pointer;margin:0 auto;display:block}
+#catbtn svg{width:150px;height:auto;filter:drop-shadow(0 8px 14px rgba(176,18,95,.3));transition:transform .25s}
+#catbtn:active svg{transform:scale(.9) rotate(-5deg)}
+#bubble{min-height:3.4em;margin:14px auto 0;max-width:420px;padding:12px 18px;font-weight:700}
+.row{display:flex;justify-content:center;gap:14px;margin-top:20px;flex-wrap:wrap}
+.row svg{width:56px;height:auto;opacity:.9}
+
+/* flip cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
+.flip{perspective:900px;height:150px;background:none;border:0;cursor:pointer;font:inherit;color:inherit}
+.in{position:relative;width:100%;height:100%;transition:transform .7s;transform-style:preserve-3d}
+.flip.open .in{transform:rotateY(180deg)}
+.f,.b{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;display:grid;place-items:center;padding:14px;text-align:center;font-weight:700;font-size:.95rem}
+.f{font-size:2rem}
+.b{transform:rotateY(180deg)}
+
+/* promises */
+.pr{display:grid;gap:12px}
+.pr .glass{padding:16px 20px}
+
+/* finale */
+#finale{text-align:center}
+#finale .glass{padding:40px 22px}
+#cd{font-family:'Caveat',cursive;font-size:2rem;color:#b0125f;margin-top:18px}
+.heart{position:fixed;pointer-events:none;z-index:60;animation:fall 3.4s ease-in forwards}
+@keyframes fall{from{transform:translateY(-10vh) rotate(0);opacity:1}to{transform:translateY(110vh) rotate(540deg);opacity:.9}}
+.float{position:fixed;bottom:-30px;z-index:-1;opacity:.55;animation:rise linear infinite;pointer-events:none}
+@keyframes rise{to{transform:translateY(-115vh) rotate(25deg)}}
+footer{text-align:center;padding:30px 20px 50px;opacity:.75;font-size:.9rem}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01s!important}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="cat" viewBox="0 0 120 110">
+<path d="M18 48 L16 6 L48 28 Z M102 48 L104 6 L72 28 Z" fill="#ffd0e3" stroke="#ff4f93" stroke-width="4" stroke-linejoin="round"/>
+<path d="M24 36 L23 17 L37 28 Z M96 36 L97 17 L83 28 Z" fill="#ff9cc6"/>
+<ellipse cx="60" cy="64" rx="50" ry="42" fill="#fff3f8" stroke="#ff4f93" stroke-width="4"/>
+<ellipse cx="40" cy="62" rx="6.5" ry="9" fill="#5a2342"/><ellipse cx="80" cy="62" rx="6.5" ry="9" fill="#5a2342"/>
+<circle cx="42" cy="58" r="2.6" fill="#fff"/><circle cx="82" cy="58" r="2.6" fill="#fff"/>
+<ellipse cx="26" cy="78" rx="9" ry="5.5" fill="#ffb3d1" opacity=".8"/><ellipse cx="94" cy="78" rx="9" ry="5.5" fill="#ffb3d1" opacity=".8"/>
+<path d="M54 76 Q60 82 66 76 Z" fill="#ff4f93"/>
+<path d="M60 82 Q54 92 46 88 M60 82 Q66 92 74 88" fill="none" stroke="#5a2342" stroke-width="3" stroke-linecap="round"/>
+<path d="M8 70 L28 74 M8 82 L28 80 M112 70 L92 74 M112 82 L92 80" stroke="#ff4f93" stroke-width="2.6" stroke-linecap="round"/>
+</symbol>
+</svg>
+
+<div id="gate">
+  <div class="glass">
+    <svg class="cat bob" width="130" height="120" viewBox="0 0 120 110" style="margin:0 auto"><use href="#cat"/></svg>
+    <h1>Bhavu, suno na...</h1>
+    <p style="margin-bottom:20px">Aandu ne tumhare liye<br>ek chhota sa surprise banaya hai 💗</p>
+    <button class="btn" id="open">Surprise kholo 🐾</button>
+  </div>
+</div>
+
+<section id="hero">
+  <div class="glass">
+    <div class="big">11/11</div>
+    <h2 style="margin-top:10px">Mera sabse pyaara din</h2>
+    <p class="hello">Bhavu, ye poori website sirf tumhare liye hai.<br>Har lafz, har rang, har billi. 🌷</p>
+    <p class="scroll">neeche scroll karo ↓</p>
+  </div>
+</section>
+
+<section>
+  <h2>Tumhare naam ek chitthi 💌</h2>
+  <div class="glass letter" id="letter">
+    <p>Meri Bhavu,</p>
+    <p>Mujhe nahi pata tumhe ye kaise batau ki tum meri zindagi mein kitni khaas ho. Bas itna pata hai ki jab se tum aayi ho, mere din halke aur muskurahat zyada ho gayi hai.</p>
+    <p>Tumhari choti choti baatein, tumhara pyaar jataane ka tareeka, tumhari banayi crafts aur drawings, sab kuch mere paas sambhal ke rakha hai, dil mein bhi.</p>
+    <p>Main perfect nahi hu, par tumhare liye sachcha hu. Jo bhi hu, jaisa bhi hu, tumhara hu.</p>
+    <p>Bas aise hi hamesha mere saath rehna. Main tumhara khayal rakhunga, tumhe hasata rahunga, aur kabhi akela nahi chhodunga.</p>
+    <p class="sign">Hamesha tumhara,<br>Aandu 💗</p>
+  </div>
+</section>
+
+<section>
+  <h2>Hamari chhoti si kahani 🐾</h2>
+  <p class="sub">kuch pal jo kabhi nahi bhoolunga</p>
+  <div class="tl">
+    <div class="glass ev"><b>15 June, 2:41 PM</b>Hamara pehla text. Yahin se sab shuru hua.</div>
+    <div class="glass ev"><b>Jab maine pehli baar "babyy" bola</b>Tumne uska snap record kar liya tha. Mujhe pata hai tumne kitna pyaar se rakha hoga, aur wo baat mere dil mein hamesha rahegi.</div>
+    <div class="glass ev"><b>Hidden Love, saath mein</b>Humne plan kiya tha saath mein dekhne ka. Wo din aayega, popcorn aur tum, aur mera poora dhyan tumpe. 🍿</div>
+    <div class="glass ev"><b>Tumhare haath ki banayi cheezein</b>Wo paper flowers, wo drawing, wo "my heart". Mere liye duniya ka sabse bada khazana.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Cat corner 🐱</h2>
+  <p class="sub">billi ko dabao, wo kuch kehna chahti hai</p>
+  <div class="glass cats">
+    <button id="catbtn" aria-label="Billi ko tap karo"><svg viewBox="0 0 120 110"><use href="#cat"/></svg></button>
+    <div class="glass" id="bubble">Meow? Mujhe tap karo 🐾</div>
+    <div class="row"><svg viewBox="0 0 120 110"><use href="#cat"/></svg><svg viewBox="0 0 120 110"><use href="#cat"/></svg><svg viewBox="0 0 120 110"><use href="#cat"/></svg></div>
+  </div>
+</section>
+
+<section>
+  <h2>Kyun tum mere liye khaas ho 💗</h2>
+  <p class="sub">cards ko tap karke palto</p>
+  <div class="grid" id="reasons"></div>
+</section>
+
+<section>
+  <h2>Mere chhote chhote vaade 🤍</h2>
+  <div class="pr">
+    <div class="glass">🌷 Tumhari baat hamesha dhyan se sununga, chahe wo kitni bhi choti ho.</div>
+    <div class="glass">🐱 Tumhari favourite billiyon ki tarah, tumhe pyaar aur sukoon dunga.</div>
+    <div class="glass">🍉 Tumhe hasaunga, chahe din kitna bhi bura ho.</div>
+    <div class="glass">🏔️ Ek din tumhe tumhare favourite North East zaroor le jaunga.</div>
+  </div>
+</section>
+
+<section id="finale">
+  <h2>Bas ek aakhri baat...</h2>
+  <div class="glass">
+    <svg class="cat bob" width="110" height="100" viewBox="0 0 120 110" style="margin:0 auto 12px"><use href="#cat"/></svg>
+    <p style="font-size:1.15rem;margin-bottom:20px"><b>Bhavu, I love you.</b><br>Aaj bhi, kal bhi, hamesha.</p>
+    <button class="btn" id="love">Aandu ko pyaar bhejo 💗</button>
+    <div id="cd"></div>
+  </div>
+</section>
+<footer>Made with love by Aandu 💗 · 11/11</footer>
+
+<script>
+/* ====== EDIT ME: yahan apne real words badal sakte ho ====== */
+const REASONS=[
+ ["🌸","Tumhari muskurahat meri poori thakaan mita deti hai."],
+ ["🐱","Tumhara billiyon se pyaar mujhe sabse cute lagta hai."],
+ ["✂️","Tum mere liye apne haathon se cheezein banati ho."],
+ ["💌","Tumhara pehla love letter, mere paas hamesha rahega."],
+ ["🎧","Tumhari awaaz sunke mera din ban jaata hai."],
+ ["🌷","Tum jaisi ho waisi hi sabse pyaari ho."]
+];
+const MEOWS=["Meow! Aandu tumse bahut pyaar karta hai 🐾","Purrr... Bhavu sabse pyaari hai 💗","Meow meow! Aaj tum special ho 🌷","Aandu ne kaha: tumhe ek bada sa hug 🤗","Mrrow! Hidden Love kab dekh rahe ho? 🍿","Purr purr... tum meri favourite insaan ho 🐱"];
+const BIRTHDAY=new Date(2027,0,3); // 3 January
+/* ============================================================ */
+
+const $=s=>document.querySelector(s);
+const hearts=["💗","💖","🌷","🐾","💕","🩷"];
+function rain(n){for(let i=0;i<n;i++){const h=document.createElement('div');h.className='heart';h.textContent=hearts[i%hearts.length];h.style.left=Math.random()*100+'vw';h.style.fontSize=(16+Math.random()*22)+'px';h.style.animationDelay=Math.random()*1.4+'s';document.body.appendChild(h);setTimeout(()=>h.remove(),5200)}}
+
+$('#open').onclick=()=>{$('#gate').classList.add('gone');rain(26)};
+
+/* letter reveal line by line */
+const ps=[...document.querySelectorAll('#letter p')];
+const io=new IntersectionObserver(e=>{if(e[0].isIntersecting){ps.forEach((p,i)=>setTimeout(()=>p.classList.add('on'),i*900));io.disconnect()}},{threshold:.25});
+io.observe($('#letter'));
+
+/* cat */
+let m=0;$('#catbtn').onclick=()=>{$('#bubble').textContent=MEOWS[m++%MEOWS.length]};
+
+/* flip cards */
+const g=$('#reasons');
+REASONS.forEach(([e,t])=>{const b=document.createElement('button');b.className='flip';b.setAttribute('aria-label','Card palto');
+b.innerHTML=`<div class="in"><div class="f glass">${e}</div><div class="b glass">${t}</div></div>`;
+b.onclick=()=>b.classList.toggle('open');g.appendChild(b)});
+
+/* finale */
+$('#love').onclick=()=>rain(46);
+function cd(){const d=Math.ceil((BIRTHDAY-new Date())/864e5);
+$('#cd').textContent=d>0?`Bhavu ke birthday (3 Jan) mein sirf ${d} din baaki 🎂`:'Happy Birthday Bhavu! 🎂💗'}
+cd();
+
+/* floating cats/hearts in background */
+for(let i=0;i<9;i++){const f=document.createElement('div');f.className='float';f.textContent=i%2?'🐱':'💗';f.style.left=(i*11+Math.random()*6)+'vw';f.style.fontSize=(18+Math.random()*16)+'px';f.style.animationDuration=(16+Math.random()*14)+'s';f.style.animationDelay=(-Math.random()*20)+'s';document.body.appendChild(f)}
+</script>
+</body>
+</html>
